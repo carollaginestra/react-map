@@ -3,9 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/runtime": "^7.4.5",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
+    "react-async-script-loader": "^0.3.0",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "request-promise": "^4.2.4"
   },
   "scripts": {
     "start": "react-scripts start",
