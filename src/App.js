@@ -28,7 +28,8 @@ class App extends Component {
       const map = new window.google.maps.Map(document.getElementById("map"), {
         zoom: 15,
         center: this.state.mapCenter,
-        styles: mapStyles
+        styles: mapStyles,
+        mapTypeControl: false
       });
 
       // set up bounds and infowindow to use later
@@ -98,6 +99,10 @@ class App extends Component {
             <div className="text-center">
               <img src={Logo} alt="Logo" className="logo" />
             </div>
+
+            <button id="navbar" className="close-nav" onClick={this.toggleList}>
+              <span className="navbar-close-icon"></span>
+            </button>
 
             {
             mapReady ? (
