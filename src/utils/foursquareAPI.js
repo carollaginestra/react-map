@@ -1,12 +1,17 @@
 import { CLIENT_ID, CLIENT_SECRET } from "./credentials";
 
 // url and params
-const url = "https://api.foursquare.com/v2/venues/";
-const v = "20181215";
-const radius = "900";
-const category =  {
-  food: '4d4b7105d754a06374d81259',
-};
+try {
+  var url = "https://api.foursquare.com/v2/venues/";
+} catch (e) {
+  console.log('Error', e);
+}
+
+  const v = "20181215";
+  const radius = "900";
+  const category =  {
+    food: '4d4b7105d754a06374d81259',
+  };
 
 const categoryId = Object.keys(category).map(cat => category[cat]);
 

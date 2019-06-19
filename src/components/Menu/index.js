@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 class Menu extends Component {
     static propTypes = {
         restaurant: PropTypes.object.isRequired,
-        listOpen: PropTypes.bool.isRequired
+        menuOpen: PropTypes.bool.isRequired
     };
 
     showInfo = () => {
@@ -13,15 +13,15 @@ class Menu extends Component {
     };
 
     render() {
-        const { restaurant, listOpen } = this.props;
+        const { restaurant, menuOpen } = this.props;
 
         return (
-        <li className="restaurant">
+        <li className="restaurant" aria-label={restaurant.name}>
             <div
             onClick={this.showInfo}
             onKeyPress={this.showInfo}
             role="button"
-            tabIndex={listOpen ? "0" : "-1"}
+            tabIndex={menuOpen ? "0" : "-1"}
             className="restaurant-item"
             >
             {restaurant.name}

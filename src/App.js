@@ -29,7 +29,8 @@ class App extends Component {
         zoom: 15,
         center: this.state.mapCenter,
         styles: mapStyles,
-        mapTypeControl: false
+        mapTypeControl: false,
+        fullscreenControl: false
       });
 
       // set up bounds and infowindow to use later
@@ -87,20 +88,20 @@ class App extends Component {
 
         <section>
 
-          <button id="navbar" className="toggle-nav" onClick={this.toggleList}>
+          <button id="navbar" className="toggle-nav" onClick={this.toggleList} aria-label="Open Menu">
             <span className="navbar-toggler-icon"></span>
           </button>
 
           <nav id="restaurants-list"
             className={listOpen ? "list open" : "list"}
-            role="complementary"
+            role="navigation"
             tabIndex={listOpen ? "0" : "-1"}>
 
             <div className="text-center">
               <img src={Logo} alt="Logo" className="logo" />
             </div>
 
-            <button id="navbar" className="close-nav" onClick={this.toggleList}>
+            <button id="navbar" className="close-nav" onClick={this.toggleList} aria-label="Close Menu">
               <span className="navbar-close-icon"></span>
             </button>
 
@@ -115,7 +116,7 @@ class App extends Component {
                 listOpen={listOpen}
               />
             ) : (
-              <p>
+              <p className="center-item">
                 Connection error.
               </p>
             )}
