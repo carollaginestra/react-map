@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/react-map/static/css/main.ab6118df.chunk.css",
+    "main.js": "/react-map/static/js/main.fecbcfa3.chunk.js",
+    "main.js.map": "/react-map/static/js/main.fecbcfa3.chunk.js.map",
+    "runtime~main.js": "/react-map/static/js/runtime~main.45ad3ed3.js",
+    "runtime~main.js.map": "/react-map/static/js/runtime~main.45ad3ed3.js.map",
+    "static/js/2.cb176b46.chunk.js": "/react-map/static/js/2.cb176b46.chunk.js",
+    "static/js/2.cb176b46.chunk.js.map": "/react-map/static/js/2.cb176b46.chunk.js.map",
+    "index.html": "/react-map/index.html",
+    "precache-manifest.cfd8995eef35fb953f77f5e6c76a21ed.js": "/react-map/precache-manifest.cfd8995eef35fb953f77f5e6c76a21ed.js",
+    "service-worker.js": "/react-map/service-worker.js",
+    "static/css/main.ab6118df.chunk.css.map": "/react-map/static/css/main.ab6118df.chunk.css.map",
+    "static/media/loader.gif": "/react-map/static/media/loader.def46ae4.gif",
+    "static/media/logo.svg": "/react-map/static/media/logo.6ec3c5da.svg",
+    "static/media/no-image.png": "/react-map/static/media/no-image.7e0d3d3d.png"
+  }
+}
