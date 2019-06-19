@@ -2,8 +2,10 @@
   "name": "react-map",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://github.com/carollaginestra/react-map.git",
   "dependencies": {
     "@babel/runtime": "^7.4.5",
+    "gh-pages": "^2.0.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-async-script-loader": "^0.3.0",
@@ -15,7 +17,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
   },
   "eslintConfig": {
     "extends": "react-app"
