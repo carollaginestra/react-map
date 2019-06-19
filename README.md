@@ -3,6 +3,10 @@
 This project was created for Udacity's advanced front-end course.
 It's a restaurant map using the Google Maps API, Foursquare API, and Create-react-app.
 
+## Online version
+
+[click here](https://carollaginestra.github.io/react-map/)
+
 ## Installing
 
 Install/update packages
