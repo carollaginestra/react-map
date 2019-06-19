@@ -8,7 +8,7 @@ import Logo from "./images/logo.svg";
 
 class App extends Component {
   state = {
-    listOpen: true,
+    menuOpen: true,
     map: {},
     infowindow: {},
     bounds: {},
@@ -53,14 +53,14 @@ class App extends Component {
   }
 
   toggleList = () => {
-    const { width, listOpen, infowindow } = this.state;
+    const { width, menuOpen, infowindow } = this.state;
 
     if (width < 768) {
       // close infowindow if listview is opening
-      if (!listOpen) {
+      if (!menuOpen) {
         infowindow.close();
       }
-      this.setState({ listOpen: !listOpen });
+      this.setState({ menuOpen: !menuOpen });
     }
   };
 
@@ -74,7 +74,7 @@ class App extends Component {
 
   render() {
     const {
-      listOpen,
+      menuOpen,
       map,
       infowindow,
       bounds,
@@ -93,9 +93,9 @@ class App extends Component {
           </button>
 
           <nav id="restaurants-list"
-            className={listOpen ? "list open" : "list"}
+            className={menuOpen ? "list open" : "list"}
             role="navigation"
-            tabIndex={listOpen ? "0" : "-1"}>
+            tabIndex={menuOpen ? "0" : "-1"}>
 
             <div className="text-center">
               <img src={Logo} alt="Logo" className="logo" />
@@ -113,7 +113,7 @@ class App extends Component {
                 bounds={bounds}
                 mapCenter={mapCenter}
                 toggleList={this.toggleList}
-                listOpen={listOpen}
+                menuOpen={menuOpen}
               />
             ) : (
               <p className="center-item">
