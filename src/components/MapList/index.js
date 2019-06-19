@@ -17,7 +17,7 @@ class MapList extends Component {
     bounds: PropTypes.object.isRequired,
     mapCenter: PropTypes.object.isRequired,
     toggleList: PropTypes.func.isRequired,
-    listOpen: PropTypes.bool.isRequired
+    menuOpen: PropTypes.bool.isRequired
   };
 
   state = {
@@ -79,7 +79,7 @@ class MapList extends Component {
             infowindow.setContent(marker.restaurantContent);
             infowindow.open(map, marker);
 
-            if (self.props.listOpen) {
+            if (self.props.menuOpen) {
               toggleList();
             }
           });
@@ -120,7 +120,7 @@ class MapList extends Component {
 
   render() {
     const { apiReturned, filteredRestaurant, search} = this.state;
-    const { listOpen } = this.props;
+    const { menuOpen } = this.props;
 
     // API fail
     if (this.state.apiError) {
@@ -139,14 +139,14 @@ class MapList extends Component {
             className="search"
             role="search"
             aria-label="text filter"
-            tabIndex={listOpen ? "0" : "-1"}
+            tabIndex={menuOpen ? "0" : "-1"}
           />
           <hr/>
 
           {apiReturned && filteredRestaurant.length > 0 ? (
             <ul className="restaurants-list">
               {filteredRestaurant.map((restaurant, id) => (
-                <Menu key={restaurant.id} restaurant={restaurant} listOpen={listOpen} />
+                <Menu key={restaurant.id} restaurant={restaurant} menuOpen={menuOpen} />
               ))}
             </ul>
           ) : (
