@@ -22,7 +22,7 @@ class App extends Component {
     window.addEventListener("resize", this.updateWidth);
   }
 
-  componentDidUpdate({ isScriptLoadSucceed }) {
+  componentDidUpdate({ isScriptLoadSucceed, prevState }) {
     if (isScriptLoadSucceed && !this.state.mapReady) {
       // creating the map
       const map = new window.google.maps.Map(document.getElementById("map"), {
@@ -35,15 +35,17 @@ class App extends Component {
       const bounds = new window.google.maps.LatLngBounds();
       const infowindow = new window.google.maps.InfoWindow({ maxWidth: 300 });
 
-      this.setState({
-        map: map,
-        infowindow: infowindow,
-        bounds: bounds,
-        mapReady: true
-      });
+      if (this.state !== prevState) {
+        this.setState({
+          map: map,
+          infowindow: infowindow,
+          bounds: bounds,
+          mapReady: true
+        });
+      }
 
       // alert user if map request fails
-    } else if (!this.state.mapReady) {
+    } else if (!isScriptLoadSucceed && !this.state.mapError) {
       this.setState({ mapError: true });
     }
   }
@@ -85,7 +87,7 @@ class App extends Component {
         <section>
 
           <button id="navbar" className="toggle-nav" onClick={this.toggleList}>
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
 
           <nav id="restaurants-list"
