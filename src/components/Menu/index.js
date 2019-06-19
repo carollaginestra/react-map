@@ -16,7 +16,7 @@ class Menu extends Component {
         const { restaurant, listOpen } = this.props;
 
         return (
-        <li className="restaurant">
+        <li className="restaurant" aria-label={restaurant.name}>
             <div
             onClick={this.showInfo}
             onKeyPress={this.showInfo}
