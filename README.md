@@ -2,7 +2,7 @@
 
 This project was created for Udacity's advanced front-end course.
 
-# About the map
+## About the map
 
 The project is a map showing some restaurants and information about them from the city of Umuarama / PR - Brazil. In it is possible to filter through restaurants, and the project is totally responsive.
 
