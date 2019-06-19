@@ -2,7 +2,7 @@
   "name": "react-map",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/carollaginestra/react-map.git",
+  "homepage": "https://carollaginestra.github.io/react-map/",
   "dependencies": {
     "@babel/runtime": "^7.4.5",
     "gh-pages": "^2.0.1",
