@@ -10,7 +10,7 @@
     "react": "^16.8.6",
     "react-async-script-loader": "^0.3.0",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1",
+    "react-scripts": "3.4.4",
     "request-promise": "^4.2.4"
   },
   "scripts": {
